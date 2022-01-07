@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-center mt-4">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header"><h3><%= @project.title %></h3></div>
+        <div class="card-body">
+          <p class="lead">
+            <%= sanitize @project.description %>
+          </p>
+        </div>
+      </div>
+              <%= link_to projects_path, :class=>"btn col-12 btn-primary" do%>
+          <i class="fas fa-arrow-circle-left"></i>
+        <% end %>
+    </div>
+  </div>
+</div>
