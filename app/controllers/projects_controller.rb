@@ -10,6 +10,16 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def autocomplete
+    render json: Project.search(params[:query], {
+      fields: ["title"],
+      match: :word_start,
+      limit: 10,
+      load: false,
+      misspellings: {below: 5}
+    }).map(&:title)
+  end
+
   def show
   end
 

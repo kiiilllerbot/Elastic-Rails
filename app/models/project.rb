@@ -1,5 +1,6 @@
 class Project < ApplicationRecord
-  searchkick word_middle: [:title]
+  searchkick word_start: [:title]
+
   def search_data
     {
       title: title

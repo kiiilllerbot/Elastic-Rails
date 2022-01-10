@@ -3,6 +3,7 @@
 //= require trix
 //= require activestorage
 //= require turbolinks
+//= require typeahead.bundle
 //= require_tree .
 
 
