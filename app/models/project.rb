@@ -7,6 +7,8 @@ class Project < ApplicationRecord
     }
   end
 
+  default_scope { order(created_at: :asc) }
+
   validates :title, presence: true
   validates :description, presence: true
 end
